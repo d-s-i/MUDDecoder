@@ -1,6 +1,6 @@
 import { MUDDecoder } from "../src/MUDDecoder";
 
-const mud = new MUDDecoder({
+const decoder = new MUDDecoder({
     QueueUnits: {
         keySchema: { entity: "bytes32" },
         valueSchema: {
@@ -21,7 +21,7 @@ describe("MUDDecoder", function() {
             dynamicData: '0x54726964656e744d6172696e650000000000000000000000000000000000000054726964656e744d6172696e6500000000000000000000000000000000000000'
         };
 
-        const decodedRes = mud.decodeData(res, "QueueUnits");
+        const decodedRes = decoder.decodeData(res, "QueueUnits");
         console.log("decodedRes", decodedRes);
 
     });
